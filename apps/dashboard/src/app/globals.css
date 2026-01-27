@@ -1,0 +1,5 @@
+/* Import shared theme from UI package */
+@import '../../../../packages/ui/src/globals.css';
+
+/* Dashboard-specific Tailwind sources */
+@source "../../../../packages/ui/src/**/*.tsx";

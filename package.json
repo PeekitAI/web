@@ -1,0 +1,24 @@
+{
+  "name": "dashboard-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "bun@1.2.4",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:dashboard": "turbo run dev --filter=dashboard",
+    "build": "turbo run build",
+    "build:dashboard": "turbo run build --filter=dashboard",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
+    "sonner": "^2.0.7"
+  }
+}
