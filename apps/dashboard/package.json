@@ -11,6 +11,7 @@
   "dependencies": {
     "@dashboard/ui": "workspace:*",
     "@kubernetes/client-node": "^1.0.0",
+    "@radix-ui/react-select": "^2.2.6",
     "@tabler/icons-react": "^3.36.1",
     "@tailwindcss/postcss": "^4.0.0",
     "clsx": "^2.1.1",

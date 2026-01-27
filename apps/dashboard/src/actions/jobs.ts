@@ -169,7 +169,7 @@ export async function createJob(params: CreateJobParams) {
           name: params.name,
           labels: {
             'peekit.io/template': params.templateName,
-            'peekit.io/category': template.category || 'uncategorized',
+            'peekit.io/category': (template.category || 'uncategorized').replace(/\s+/g, '-').toLowerCase(),
             'app.kubernetes.io/name': params.templateName,
             'app.kubernetes.io/managed-by': 'peekit-dashboard',
           },

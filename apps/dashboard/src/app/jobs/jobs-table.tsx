@@ -9,7 +9,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
+} from '@dashboard/ui';
+import { formatCategory } from '@/lib/format';
 
 interface Job {
   name: string;
@@ -90,7 +91,7 @@ export function JobsTable({ jobs }: JobsTableProps) {
               <SelectItem value="all">All Categories</SelectItem>
               {categories.map((category) => (
                 <SelectItem key={category} value={category}>
-                  {category}
+                  {formatCategory(category)}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -159,7 +160,7 @@ export function JobsTable({ jobs }: JobsTableProps) {
                     <td className="px-6 py-4">
                       {job.category ? (
                         <span className="inline-flex items-center px-2 py-1 rounded-md bg-primary/10 text-primary text-[11px] font-medium">
-                          {job.category}
+                          {formatCategory(job.category)}
                         </span>
                       ) : (
                         <span className="text-[12px] text-muted-foreground">-</span>
